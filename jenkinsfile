@@ -2,7 +2,6 @@ pipeline {
     agent any
 
     stages {
-
         stage('Checkout') {
             steps {
                 checkout scm
@@ -11,13 +10,13 @@ pipeline {
 
         stage('Run Application') {
             steps {
-                bat 'python app.py'
+                bat '"C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python315\\python.exe" app.py'
             }
         }
 
         stage('Run Tests') {
             steps {
-                bat 'python test.py'
+                bat '"C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python315\\python.exe" test.py'
             }
         }
 
@@ -32,7 +31,6 @@ pipeline {
         success {
             echo 'Jenkins Build Successful'
         }
-
         failure {
             echo 'Jenkins Build Failed'
         }
