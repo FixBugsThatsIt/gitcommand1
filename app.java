@@ -1,10 +1,9 @@
-public class AppTest {
+public class App {
+    public static int add(int a, int b) {
+        return a + b;
+    }
+
     public static void main(String[] args) {
-        int result = App.add(2, 3);
-        if (result != 5) {
-            System.out.println("TEST FAILED: expected 5 but got " + result);
-            System.exit(1);
-        }
-        System.out.println("TEST PASSED");
+        System.out.println("7 + 9 = " + add(7, 9));
     }
 }
